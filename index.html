@@ -1,0 +1,2710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2022 전화감섬 캠페인</title>
+</head>
+<style>
+    /* 폰트 */
+    @font-face {
+        font-family: 'LotteMartDream';
+        font-style: normal;
+        font-weight: 400;
+        src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff') format('woff');
+    }
+
+    @font-face {
+        font-family: 'LotteMartDream';
+        font-style: normal;
+        font-weight: 700;
+        src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff') format('woff');
+    }
+
+    @font-face {
+        font-family: 'LotteMartDream';
+        font-style: normal;
+        font-weight: 300;
+        src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff') format('woff');
+    }
+
+    html {
+        font-family: 'LotteMartDream', sans-serif;
+    }
+
+    /*노말라이즈*/
+    body,
+    ul,
+    li,
+    a {
+        margin: 0 auto;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    /*전체*/
+    html {
+        scroll-behavior: smooth;
+    }
+
+    header {
+        width: 100%;
+        height: 1000px;
+    }
+
+    /*로고*/
+    .logo {
+        text-align: center;
+        padding: 12% 0;
+    }
+
+    .logo > video {
+        width: 40%;
+        margin-left: 0 auto;
+        margin-right: 0 auto;
+    }
+
+    /*라이브러리*/
+    .con {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .block {
+        display: block;
+    }
+
+    /*커스텀*/
+    :root {
+        --site-width: 1300px;
+    }
+
+    .con {
+        width: var(--site-width);
+    }
+
+    h1 {
+        font-size: 2.1rem;
+        text-align: center;
+        color: rgb(148, 148, 148);
+    }
+
+    h3 {
+        margin-bottom: 0;
+        color: rgb(44, 44, 194);
+    }
+
+    .sector01>.subtext {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 10px;
+        color: rgb(156, 156, 156);
+    }
+
+    .text01 {
+        text-align: justify;
+        margin-top: 30px;
+        font-size: 1rem;
+        line-height: 27px;
+    }
+
+    .text01>.subtext01 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 10px;
+        color: rgb(156, 156, 156);
+    }
+
+    .line_area {
+        position: relative;
+        height: 70px;
+    }
+
+    .line {
+        position: absolute;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        align-items: center;
+        width: 75%;
+        left: 50%;
+        top: 8%;
+        transform: translate(-50%, -50%);
+        border-top: 1.8px solid rgb(95, 95, 95);
+    }
+
+    .symbol {
+        position: absolute;
+        width: 40px;
+        left: 50%;
+        top: 14px;
+        transform: translate(-50%);
+        background-color: rgb(248, 255, 248);
+    }
+
+    .img01>img {
+        width: 40%;
+        margin-top: 30px;
+    }
+
+    /*메뉴*/
+    nav {
+        position: sticky;
+        top: -0.1%;
+        width: 100%;
+        font-weight: bold;
+        background-color: #fff;
+        z-index: 100;
+        box-shadow: rgb(141, 141, 141) 0 2px 4px;
+    }
+
+    .top-bar>.con {
+        text-align: center;
+    }
+
+    .top-bar__menu-box-1 {
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .top-bar__menu-box-1>ul {
+        border-bottom: 1.2px solid black;
+    }
+
+    .top-bar__menu-box-1 ul>li {
+        position: relative;
+    }
+
+    .top-bar__menu-box-1>ul>li {
+        display: inline-block;
+    }
+
+    .top-bar__menu-box-1 ul>li>a {
+        display: flex;
+        height: 70px;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold 30%;
+        font-size: 1.1rem;
+        white-space: nowrap;
+    }
+
+    .top-bar__menu-box-1>ul>li>a {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    .top-bar__menu-box-1>ul>li:hover>a {
+        background-color: black;
+        color: #fff;
+    }
+
+    .top-bar__menu-box-1>ul ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+        background-color: rgb(144, 226, 206);
+    }
+
+    .top-bar__menu-box-1>ul>li ul {
+        width: 100%;
+    }
+
+    .top-bar__menu-box-1>ul ul>li>a {
+        color: #fff;
+    }
+
+    .top-bar__menu-box-1>ul>li:hover>a {
+        background-color: rgb(30, 109, 105);
+    }
+
+    .top-bar__menu-box-1>ul>li>ul>li:hover>a {
+        background-color: rgb(55, 150, 145);
+    }
+
+    .top-bar__menu-box-1>ul>li>ul>li>ul>li:hover>a {
+        background-color: rgb(98, 199, 194);
+    }
+
+    .top-bar__menu-box-1 ul>li:hover>ul {
+        display: block;
+    }
+
+    .top-bar__menu-box-1>ul ul ul {
+        left: 100%;
+        top: 0;
+    }
+
+    .top-bar__menu-box-1>ul ul ul>li>a {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /*section*/
+    section {
+        background-color: rgb(248, 255, 248);
+    }
+
+    /*section01*/
+    #section01 {
+        position: relative;
+        height: 90vh;
+        display: inline-block;
+        width: 72%;
+        margin: auto;
+        z-index: 2;
+        /*border: 1px solid blue;*/
+    }
+
+    #section01>.text01>.sector01,
+    .sector02 {
+        display: inline-block;
+        width: 48%;
+    }
+
+    #section01>h1 {
+        margin-top: 150px;
+        text-align: center;
+    }
+
+    #section01>h1>div {
+        display: inline-block;
+        color: rgb(91, 214, 194);
+        margin-left: -12px;
+    }
+
+    #section01>.text01 {
+        margin-top: 150px;
+    }
+
+    #section01>.text01>.sector02 {
+        float: right;
+    }
+
+    /*section02*/
+    #section02 {
+        height: 132vh;
+        display: inline-block;
+        width: 100%;
+        margin: 0 auto;
+        /*border: 1px solid rgb(36, 36, 211);*/
+    }
+
+    #section02>h1 {
+        text-align: center;
+        margin-top: 100px;
+        margin-bottom: 80px;
+    }
+
+    #section02>.img01 {
+        width: 100%;
+        display: inline-block;
+    }
+
+    #section02>.img01>video {
+        margin-left: 3%;
+        width: 29.4%;
+        opacity: 0;
+        box-shadow: rgb(141, 141, 141) 0 0 0;
+        transition: all .4s;
+    }
+
+    #section02>.img01>img {
+        margin-left: 7%;
+        width: 32%;
+        box-shadow: rgb(141, 141, 141) 0 0 0;
+        transition: all .4s;
+    }
+
+    #section02:hover>.img01>video {
+        opacity: 1;
+        transition: all .4s;
+        box-shadow: rgb(141, 141, 141) 10px 10px 10px;
+    }
+
+    #section02:hover>.img01>img {
+        box-shadow: rgb(141, 141, 141) 10px 10px 10px;
+        transition: all .4s;
+    }
+
+     /*section03*/
+     #section03 {
+        height: 438vh;
+        display: inline-block;
+        width: 100%;
+        margin: 0 auto;
+        /*border: 1px solid rgb(53, 53, 139);*/
+    }
+
+    #section03>h1 {
+        margin-top: 110px;
+        margin-bottom: 100px;
+    }
+
+    /*타이틀-공책*/
+    .title_note {
+        position: relative;
+        font-size: 1.5rem;
+        width: 58.8%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        text-align: left;
+        color: rgb(109, 109, 109);
+        transition: all .4s;
+    }
+
+    .title_note:hover {
+        color: rgb(147, 167, 38)
+    }
+
+    .title_note:before {
+        content: ' ';
+        background-color: currentColor;
+        position: absolute;
+        transition: margin .4s;
+        left: 0;
+        right: 0;
+        margin-right: 36em;
+        bottom: -0.2em;
+        height: 0.2em;
+    }
+
+    .title_note:hover::before {
+        margin-right: 30em;
+    }
+
+    /*타이틀-엽서*/
+    .title_card {
+        position: relative;
+        font-size: 1.5rem;
+        width: 58.8%;
+        margin: 0 auto;
+        margin-top: 80px;
+        margin-bottom: 20px;
+        text-align: left;
+        color: rgb(109, 109, 109);
+        transition: all .4s;
+    }
+
+    .title_card:hover {
+        color: rgb(206, 65, 164)
+    }
+
+    .title_card:before {
+        content: ' ';
+        background-color: currentColor;
+        position: absolute;
+        transition: margin .4s;
+        left: 0;
+        right: 0;
+        margin-right: 36em;
+        bottom: -0.2em;
+        height: 0.2em;
+    }
+
+    .title_card:hover::before {
+        margin-right: 30em;
+    }
+
+    /*타이틀-책갈피*/
+    .title_bookmark {
+        position: relative;
+        font-size: 1.5rem;
+        width: 58.8%;
+        margin: 0 auto;
+        margin-top: 80px;
+        margin-bottom: 20px;
+        text-align: left;
+        color: rgb(109, 109, 109);
+        transition: all .4s;
+    }
+
+    .title_bookmark:hover {
+        color: rgb(103, 170, 224)
+    }
+
+    .title_bookmark:before {
+        content: ' ';
+        background-color: currentColor;
+        position: absolute;
+        transition: margin .4s;
+        left: 0;
+        right: 0;
+        margin-right: 36em;
+        bottom: -0.2em;
+        height: 0.2em;
+    }
+
+    .title_bookmark:hover::before {
+        margin-right: 29.1em;
+    }
+
+    /*공책*/
+
+    .note_item>img {
+        vertical-align: top;
+    }
+
+    .note {
+        display: flex;
+        width: 760px;
+        transition: all .4s;
+    }
+
+    .note:hover .note_item {
+        width: 25%;
+        transition: all .4s;
+    }
+
+    .note .note_item:hover {
+        width: 50%;
+        opacity: 1;
+        transition: all .4s;
+    }
+
+    .note_item {
+        width: 33.333333%;
+        overflow: hidden;
+        transition: all .4s;
+        justify-content: space-around;
+        display: flex;
+        position: relative;
+        opacity: 0.4;
+        transition: all .4s;
+    }
+
+    .note_item_cover {
+        flex-shrink: 0;
+    }
+
+    .note_item_contents {
+        position: absolute;
+        overflow: hidden;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .note_item_contents h2 {
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+
+    .note_item_contents p {
+        width: 298px;
+        font-size: 0.8rem;
+        color: rgb(230, 227, 227);
+        line-height: 1.45;
+        justify-content: left;
+        text-align: justify;
+    }
+
+    .note01 {
+        color: rgb(215, 245, 244);
+    }
+
+    .note02 {
+        color: rgb(215, 225, 255);
+    }
+
+    .note03 {
+        color: rgb(253, 212, 212);
+    }
+
+    /*card*/
+
+    .card_item>img {
+        vertical-align: top;
+    }
+
+    .card {
+        display: flex;
+        width: 760px;
+        transition: all .4s;
+    }
+
+    .card:hover .card_item {
+        width: 25%;
+        transition: all .4s;
+    }
+
+    .card .card_item:hover {
+        width: 50%;
+        opacity: 1;
+        transition: all .4s;
+    }
+
+    .card_item {
+        width: 33.333333%;
+        overflow: hidden;
+        transition: all .4s;
+        justify-content: space-around;
+        display: flex;
+        position: relative;
+        opacity: 0.4;
+        transition: all .4s;
+    }
+
+    .card_item_cover {
+        flex-shrink: 0;
+    }
+
+    .card_item_contents {
+        position: absolute;
+        overflow: hidden;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .card_item_contents h2 {
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+
+    .card_item_contents p {
+        width: 298px;
+        font-size: 0.8rem;
+        color: rgb(230, 227, 227);
+        line-height: 1.45;
+        justify-content: left;
+        text-align: justify;
+    }
+
+    .card01 {
+        color: rgb(247, 165, 250);
+    }
+
+    .card02 {
+        color: rgb(215, 225, 255);
+    }
+
+    .card03 {
+        color: rgb(253, 212, 251);
+    }
+
+    .card04 {
+        color: rgb(131, 226, 255);
+    }
+
+    /*bookmark*/
+    .bookmark_item>img {
+        vertical-align: top;
+    }
+
+    .bookmark {
+        display: flex;
+        width: 760px;
+        transition: all .4s;
+    }
+
+    .bookmark:hover .bookmark_item {
+        width: 25%;
+        transition: all .4s;
+    }
+
+    .bookmark .bookmark_item:hover {
+        width: 50%;
+        opacity: 1;
+        transition: all .4s;
+    }
+
+    .bookmark_item {
+        width: 33.333333%;
+        overflow: hidden;
+        transition: all .4s;
+        justify-content: space-around;
+        display: flex;
+        position: relative;
+        opacity: 0.4;
+        transition: all .4s;
+    }
+
+    .bookmark_item_cover {
+        flex-shrink: 0;
+    }
+
+    .bookmark_item_contents {
+        position: absolute;
+        overflow: hidden;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .bookmark_item_contents h2 {
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+
+    .bookmark_item_contents p {
+        width: 298px;
+        font-size: 0.8rem;
+        color: rgb(230, 227, 227);
+        line-height: 1.45;
+        justify-content: left;
+        text-align: justify;
+    }
+
+    .bookmark01 {
+        color: rgb(215, 245, 244);
+    }
+
+    .bookmark02 {
+        color: rgb(244, 247, 95);
+    }
+
+    .bookmark03 {
+        color: rgb(252, 212, 253);
+    }
+
+     /*section04*/
+     #section04 {
+        height: 127vh;
+        display: inline-block;
+        width: 72%;
+        margin: 0 auto;
+        /*border: 1px solid rgb(29, 29, 82);*/
+    }
+
+    #section04>h1 {
+        margin-top: 120px;
+        margin-bottom: 70px;
+    }
+
+    #section04>.img01>img {
+        width: 48%;
+        display: block;
+        border: solid 0.25px rgb(144, 226, 206);
+    }
+
+    #section04>.text01>.sector01,
+    .sector02 {
+        display: inline-block;
+        width: 48%;
+    }
+
+    #section04>h1 {
+        margin-bottom: 100px;
+    }
+
+    #section04>.text01>.sector02 {
+        float: right;
+    }
+
+    /*section05*/
+    #section05 {
+        height: 142vh;
+        display: inline-block;
+        width: 72%;
+        margin: 0 auto;
+        /*border: 1px solid rgb(32, 32, 53);*/
+    }
+
+    #section05>h1 {
+        margin-top: 120px;
+        margin-bottom: 100px;
+    }
+
+    #section05>.text01 {
+        position: relative;
+    }
+
+    #section05>.text01>.sector01 {
+        position: absolute;
+        width: 48%;
+        top: 350px;
+        right: 0;
+    }
+
+    #section05>.text01>.image01>img {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 325px;
+        float: right;
+        display: inline-block;
+        object-fit: cover;
+        border: solid 0.25px rgb(144, 226, 206);
+    }
+
+    /*section06*/
+    #section06 {
+        height: 145vh;
+        display: inline-block;
+        width: 72%;
+        margin: 0 auto;
+        /*border: 1px solid rgb(123, 123, 170);*/
+    }
+
+    #section06>h1 {
+        margin-top: 120px;
+        margin-bottom: 100px;
+    }
+
+    #section06>.text01 {
+        position: relative;
+    }
+
+    #section06>.text01>.sector01 {
+        display: inline-block;
+        width: 48%;
+    }
+
+    #section06>.text01>.image01>img {
+        position: absolute;
+        top: 2%;
+        right: 0;
+        display: inline-block;
+        width: 48%;
+        height: 280%;
+        object-fit: cover;
+        border: solid 0.25px rgb(144, 226, 206);
+    }
+
+    /*section07*/
+    #section07 {
+        height: 92vh;
+        display: inline-block;
+        width: 72%;
+        margin: 0 auto;
+        /*border: 1px solid rgb(118, 118, 153);*/
+    }
+
+    #section07>h1 {
+        margin-top: 120px;
+        margin-bottom: 100px;
+    }
+
+    #section07>.text01 {
+        position: relative;
+    }
+
+    #section07>.text01>.sector01 {
+        display: inline-block;
+        width: 48%;
+    }
+
+    #section07>.text01>.image01>img {
+        position: absolute;
+        top: 1%;
+        right: 0;
+        display: inline-block;
+        width: 48%;
+        height: 98%;
+        float: right;
+        object-fit: cover;
+        border: solid 0.25px rgb(144, 226, 206);
+    }
+
+    #section07>.text01>.image02>img {
+        position: absolute;
+        top: 440px;
+        right: 0;
+        display: inline-block;
+        width: 48%;
+        height: 50%;
+        float: right;
+        object-fit: cover;
+        border: solid 0.25px rgb(144, 226, 206);
+    }
+
+    /*section08*/
+    #section08 {
+        height: 163vh;
+        display: inline-block;
+        width: 72%;
+        margin: 0 auto;
+        /*border: 1px solid rgb(135, 135, 156);*/
+    }
+
+    #section08>h1 {
+        margin-top: 120px;
+        margin-bottom: 100px;
+    }
+
+    #section08>.text01 {
+        position: relative;
+    }
+
+    #section08>.text01>.sector01 {
+        display: inline-block;
+        width: 50%;
+    }
+
+    #section08>.text01>.image01>img {
+        position: absolute;
+        top: 420px;
+        right: 0;
+        display: inline-block;
+        width: 100%;
+        height: 98%;
+        float: right;
+        object-fit: cover;
+        border: solid 0.25px rgb(144, 226, 206);
+    }
+
+    /*section09*/
+    #section09 {
+        height: 163vh;
+        display: inline-block;
+        width: 72%;
+        margin: 0 auto;
+        /*border: 1px solid rgb(182, 182, 243);*/
+    }
+
+    #section09>h1 {
+        margin-top: 120px;
+        margin-bottom: 100px;
+    }
+
+    #section09>.text01 {
+        position: relative;
+    }
+
+    #section09>.text01>.sector01 {
+        display: inline-block;
+        width: 48%;
+    }
+
+    #section09>.text01>.image01>img {
+        position: absolute;
+        top: 425px;
+        right: 0;
+        display: inline-block;
+        width: 48%;
+        height: 98%;
+        float: right;
+        object-fit: cover;
+        border: solid 0.25px rgb(144, 226, 206);
+    }
+
+    #section09>.text01>.image02>img {
+        position: absolute;
+        top: 425px;
+        left: 0;
+        display: inline-block;
+        width: 48%;
+        height: 98%;
+        float: right;
+        object-fit: cover;
+        border: solid 0.25px rgb(144, 226, 206);
+    }
+
+     /*section10*/
+     #section10 {
+        height: 114vh;
+        display: inline-block;
+        width: 72%;
+        margin: 0 auto;
+        /*border: 1px solid rgb(91, 91, 235);*/
+    }
+
+    #section10>h1 {
+        margin-top: 120px;
+        margin-bottom: 100px;
+    }
+
+    #section10>.text01 {
+        position: relative;
+    }
+
+    #section10>.text01>.sector01 {
+        display: inline-block;
+        width: 48%;
+    }
+
+    #section10>.text01>.image01>img {
+        position: absolute;
+        top: 54%;
+        right: 0;
+        display: inline-block;
+        width: 48%;
+        height: 45%;
+        float: right;
+        object-fit: cover;
+        border: solid 0.25px rgb(144, 226, 206);
+    }
+
+    #section10>.text01>.image02>img {
+        position: absolute;
+        top: 1%;
+        right: 0;
+        display: inline-block;
+        width: 48%;
+        height: 45%;
+        float: right;
+        object-fit: cover;
+        border: solid 0.25px rgb(144, 226, 206);
+    }
+
+    /*section11*/
+    #section11 {
+        height: 104vh;
+        display: inline-block;
+        width: 72%;
+        margin: 0 auto;
+        /*border: 1px solid rgb(44, 44, 119);*/
+    }
+
+    /*게시판*/
+    .board_title {
+        margin-top: 120px;
+        margin-bottom: 30px;
+        text-align: left;
+    }
+
+    .board_title strong {
+        font-size: 2.2rem;
+        margin-left: 20px;
+    }
+
+    .board_title p {
+        font-size: 1.2rem;
+        margin-top: 15px;
+        margin-left: 20px;
+    }
+
+    .bt_wrap {
+        margin-top: 30px;
+        font-size: 0;
+        text-align: center;
+    }
+
+    .bt_wrap a {
+        display: inline-block;
+        min-width: 60px;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 2px;
+        font-size: 1rem;
+        margin-left: 10px;
+    }
+
+    .bt_wrap a:first-child {
+        margin-left: 0;
+    }
+
+    .bt_wrap a.on {
+        background-color: black;
+        color: #fff;
+    }
+
+    .board_list {
+        width: 96%;
+        text-align: left;
+        margin-left: 20px;
+        border-top: 2px solid black;
+    }
+
+    .board_list>div {
+        border-bottom: 1px solid #ddd;
+        font-size: 0;
+    }
+
+    .board_list>div.top {
+        border-bottom: 1px solid #999;
+    }
+
+    .board_list>div:last-child {
+        border-bottom: 1px solid black;
+    }
+
+    .board_list>div>div {
+        text-align: center;
+        display: inline-block;
+        font-size: 1rem;
+        font-weight: 200;
+        padding: 15px 0;
+    }
+
+    .board_list>div.top>div {
+        font-weight: 600;
+    }
+
+    .board_list .num {
+        width: 10%;
+    }
+
+    .board_list .top .title {
+        text-align: center;
+    }
+
+    .board_list .title {
+        width: 60%;
+    }
+
+    .board_list .writer {
+        width: 10%;
+    }
+
+    .board_list .date {
+        width: 10%;
+    }
+
+    .board_list .count {
+        width: 10%;
+    }
+
+    .board_page {
+        margin-top: 30px;
+        text-align: center;
+        font-size: 0;
+    }
+
+    .board_page a {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        box-sizing: border-box;
+        border: 1px solid #ddd;
+        border-left: 0;
+        vertical-align: middle;
+        line-height: 100%;
+    }
+
+    .board_page a.bt {
+        font-size: 1.2rem;
+        padding-top: 8px;
+        letter-spacing: -1px;
+    }
+
+    .board_page a.num {
+        font-size: 1.4rem;
+        padding-top: 6px;
+    }
+
+    .board_page a.num.on {
+        border-color: black;
+        background-color: black;
+        color: #fff;
+    }
+
+    .board_page a:first-child {
+        border-left: 1px solid #ddd;
+    }
+
+     /*푸터*/
+     .footer {
+        border-top: 1px solid black;
+        display: inline-block;
+        width: 72%;
+        margin: 0 auto;
+    }
+
+    .footer>img {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 40px;
+        margin-top: 30px;
+    }
+
+    .a01 {
+        width: 7%;
+    }
+
+    .a02 {
+        width: 7.8%;
+    }
+
+    .a03 {
+        width: 6%;
+    }
+
+    .a04 {
+        width: 5.8%;
+    }
+
+    .a05 {
+        width: 6%;
+    }
+
+    .a06 {
+        width: 7.8%;
+    }
+
+    @media screen and (max-width: 768px) {
+
+        /*커스텀*/
+    :root {
+        --site-width: 700px;
+    }
+
+    .con {
+        width: var(--site-width);
+    }
+
+    h1 {
+        font-size: 1.2rem;
+        text-align: center;
+        color: rgb(148, 148, 148);
+    }
+
+    h3 {
+        margin-bottom: 0;
+        color: rgb(44, 44, 194);
+    }
+
+    .sector01>.subtext {
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 10px;
+        color: rgb(156, 156, 156);
+    }
+
+    .text01 {
+        text-align: justify;
+        margin-top: 60px;
+        font-size: 0.8rem;
+        line-height: 22px;
+    }
+
+    .text01>.subtext01 {
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 0;
+        color: rgb(156, 156, 156);
+    }
+
+    .line_area {
+        position: relative;
+        height: 70px;
+    }
+
+    .line {
+        position: absolute;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        align-items: center;
+        width: 86%;
+        left: 50%;
+        top: 8%;
+        transform: translate(-50%, -50%);
+        border-top: 1.8px solid rgb(95, 95, 95);
+    }
+
+    .symbol {
+        position: absolute;
+        width: 30px;
+        left: 50%;
+        top: 19px;
+        transform: translate(-50%);
+        background-color: rgb(248, 255, 248);
+    }
+
+    .img01>img {
+        width: 40%;
+        margin-top: 30px;
+    }
+
+    /*로고*/
+    .logo {
+        text-align: center;
+        padding: 28% 0;
+    }
+
+    .logo > video {
+        width: 70%;
+        margin-right: 0 auto;
+        margin-left: 0 auto;
+        display: inline-block;
+    }
+        
+       /*메뉴*/
+    nav {
+        position: sticky;
+        top: -0.1%;
+        width: 100%;
+        font-weight: bold;
+        background-color: #fff;
+        z-index: 100;
+        box-shadow: rgb(141, 141, 141) 0 2px 4px;
+    }
+
+    .top-bar>.con {
+        text-align: center;
+    }
+
+    .top-bar__menu-box-1 {
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .top-bar__menu-box-1>ul {
+        border-bottom: 1.2px solid black;
+    }
+
+    .top-bar__menu-box-1 ul>li {
+        position: relative;
+    }
+
+    .top-bar__menu-box-1>ul>li {
+        display: inline-block;
+    }
+
+    .top-bar__menu-box-1 ul>li>a {
+        display: flex;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold 30%;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .top-bar__menu-box-1>ul>li>a {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .top-bar__menu-box-1>ul>li:hover>a {
+        background-color: black;
+        color: #fff;
+    }
+
+    .top-bar__menu-box-1>ul ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+        background-color: rgb(144, 226, 206);
+    }
+
+    .top-bar__menu-box-1>ul>li ul {
+        width: 100%;
+    }
+
+    .top-bar__menu-box-1>ul ul>li>a {
+        color: #fff;
+    }
+
+    .top-bar__menu-box-1>ul>li:hover>a {
+        background-color: rgb(30, 109, 105);
+    }
+
+    .top-bar__menu-box-1>ul>li>ul>li:hover>a {
+        background-color: rgb(55, 150, 145);
+    }
+
+    .top-bar__menu-box-1>ul>li>ul>li>ul>li:hover>a {
+        background-color: rgb(98, 199, 194);
+    }
+
+    .top-bar__menu-box-1 ul>li:hover>ul {
+        display: block;
+    }
+
+    .top-bar__menu-box-1>ul ul ul {
+        left: 100%;
+        top: 0;
+    }
+
+    .top-bar__menu-box-1>ul ul ul>li>a {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /*section01*/
+    #section01 {
+        position: relative;
+        height: 70vh;
+        display: inline-block;
+        width: 82%;
+        margin: auto;
+        z-index: 2;
+        /*border: 1px solid blue;*/
+    }
+
+    #section01>.text01>.sector01,
+    .sector02 {
+        display: inline-block;
+        width: 47%;
+    }
+
+    #section01>h1 {
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    #section01>h1>div {
+        display: inline-block;
+        color: rgb(91, 214, 194);
+        margin-left: -6px;
+    }
+
+    #section01>.text01 {
+        margin-top: 80px;
+    }
+
+    #section01>.text01>.sector02 {
+        float: right;
+    }
+
+    /*section02*/
+    #section02 {
+        height: 189vh;
+        display: inline-block;
+        width: 100%;
+        margin: 0 auto;
+        /*border: 1px solid rgb(36, 36, 211);*/
+    }
+
+    #section02>h1 {
+        text-align: center;
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+
+    #section02>.img01 {
+        width: 100%;
+    }
+
+    #section02>.img01>video {
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        opacity: 0;
+        box-shadow: rgb(141, 141, 141) 0 0 0;
+        transition: all .4s;
+    }
+
+    #section02>.img01>img {
+        display: block;
+        margin: 0 auto;
+        margin-top: 80px;
+        width: 50%;
+        box-shadow: rgb(141, 141, 141) 0 0 0;
+        transition: all .4s;
+    }
+
+    #section02:hover>.img01>video {
+        opacity: 1;
+        transition: all .4s;
+        box-shadow: rgb(141, 141, 141) 10px 10px 10px;
+    }
+
+    #section02:hover>.img01>img {
+        box-shadow: rgb(141, 141, 141) 10px 10px 10px;
+        transition: all .4s;
+    }
+
+    /*section03*/
+    #section03 {
+        height: 429vh;
+        display: inline-block;
+        width: 82%;
+        margin: 0 auto;
+        /*border: 1px solid rgb(53, 53, 139);*/
+    }
+
+    #section03>h1 {
+        margin-top: 110px;
+        margin-bottom: 80px;
+    }
+
+    /*타이틀-공책*/
+    .title_note {
+        position: relative;
+        font-size: 1.1rem;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        text-align: left;
+        color: rgb(109, 109, 109);
+        transition: all .4s;
+    }
+
+    .title_note:hover {
+        color: rgb(147, 167, 38)
+    }
+
+    .title_note:before {
+        content: ' ';
+        background-color: currentColor;
+        position: absolute;
+        transition: margin .4s;
+        left: 0;
+        right: 0;
+        margin-right: em;
+        bottom: -0.2em;
+        height: 0.2em;
+    }
+
+    .title_note:hover::before {
+        margin-right: 30.8em;
+    }
+
+    /*타이틀-엽서*/
+    .title_card {
+        position: relative;
+        font-size: 1.1rem;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 100px;
+        margin-bottom: 10px;
+        text-align: left;
+        color: rgb(109, 109, 109);
+        transition: all .4s;
+    }
+
+    .title_card:hover {
+        color: rgb(206, 65, 164)
+    }
+
+    .title_card:before {
+        content: ' ';
+        background-color: currentColor;
+        position: absolute;
+        transition: margin .4s;
+        left: 0;
+        right: 0;
+        margin-right: em;
+        bottom: -0.2em;
+        height: 0.2em;
+    }
+
+    .title_card:hover::before {
+        margin-right: 30.8em;
+    }
+
+    /*타이틀-책갈피*/
+    .title_bookmark {
+        position: relative;
+        font-size: 1.1rem;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 100px;
+        margin-bottom: 10px;
+        text-align: left;
+        color: rgb(109, 109, 109);
+        transition: all .4s;
+    }
+
+    .title_bookmark:hover {
+        color: rgb(103, 170, 224)
+    }
+
+    .title_bookmark:before {
+        content: ' ';
+        background-color: currentColor;
+        position: absolute;
+        transition: margin .4s;
+        left: 0;
+        right: 0;
+        margin-right: em;
+        bottom: -0.2em;
+        height: 0.2em;
+    }
+
+    .title_bookmark:hover::before {
+        margin-right: 29.9em;
+    }
+
+    /*공책*/
+
+    .note_item>img {
+        vertical-align: top;
+    }
+
+    .note {
+        display: flex;
+        width: 570px;
+        transition: all .4s;
+    }
+
+    .note:hover .note_item {
+        width: 25%;
+        transition: all .4s;
+    }
+
+    .note .note_item:hover {
+        width: 50%;
+        opacity: 1;
+        transition: all .4s;
+    }
+
+    .note_item {
+        width: 33.333333%;
+        overflow: hidden;
+        transition: all .4s;
+        justify-content: space-around;
+        display: flex;
+        position: relative;
+        opacity: 0.4;
+        transition: all .4s;
+    }
+
+    .note_item_cover {
+        flex-shrink: 0;
+    }
+
+    .note_item_contents {
+        position: absolute;
+        overflow: hidden;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .note_item_contents h2 {
+        margin-bottom: 10px;
+        font-size: 1rem;
+    }
+
+    .note_item_contents p {
+        width: 208px;
+        font-size: 0.6rem;
+        color: rgb(230, 227, 227);
+        line-height: 1.45;
+        justify-content: left;
+        text-align: justify;
+    }
+
+    .note01 {
+        color: rgb(215, 245, 244);
+    }
+
+    .note02 {
+        color: rgb(215, 225, 255);
+    }
+
+    .note03 {
+        color: rgb(253, 212, 212);
+    }
+
+    /*card*/
+
+    .card_item>img {
+        vertical-align: top;
+    }
+
+    .card {
+        display: flex;
+        width: 570px;
+        transition: all .4s;
+    }
+
+    .card:hover .card_item {
+        width: 25%;
+        transition: all .4s;
+    }
+
+    .card .card_item:hover {
+        width: 50%;
+        opacity: 1;
+        transition: all .4s;
+    }
+
+    .card_item {
+        width: 33.333333%;
+        overflow: hidden;
+        transition: all .4s;
+        justify-content: space-around;
+        display: flex;
+        position: relative;
+        opacity: 0.4;
+        transition: all .4s;
+    }
+
+    .card_item_cover {
+        flex-shrink: 0;
+    }
+
+    .card_item_contents {
+        position: absolute;
+        overflow: hidden;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .card_item_contents h2 {
+        margin-bottom: 10px;
+        font-size: 1rem;
+    }
+
+    .card_item_contents p {
+        width: 208px;
+        font-size: 0.6rem;
+        color: rgb(230, 227, 227);
+        line-height: 1.45;
+        justify-content: left;
+        text-align: justify;
+    }
+
+    .card01 {
+        color: rgb(247, 165, 250);
+    }
+
+    .card02 {
+        color: rgb(215, 225, 255);
+    }
+
+    .card03 {
+        color: rgb(253, 212, 251);
+    }
+
+    .card04 {
+        color: rgb(131, 226, 255);
+    }
+
+    /*bookmark*/
+    .bookmark_item>img {
+        vertical-align: top;
+    }
+
+    .bookmark {
+        display: flex;
+        width: 570px;
+        transition: all .4s;
+    }
+
+    .bookmark:hover .bookmark_item {
+        width: 25%;
+        transition: all .4s;
+    }
+
+    .bookmark .bookmark_item:hover {
+        width: 50%;
+        opacity: 1;
+        transition: all .4s;
+    }
+
+    .bookmark_item {
+        width: 33.333333%;
+        overflow: hidden;
+        transition: all .4s;
+        justify-content: space-around;
+        display: flex;
+        position: relative;
+        opacity: 0.4;
+        transition: all .4s;
+    }
+
+    .bookmark_item_cover {
+        flex-shrink: 0;
+    }
+
+    .bookmark_item_contents {
+        position: absolute;
+        overflow: hidden;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .bookmark_item_contents h2 {
+        margin-bottom: 10px;
+        font-size: 1rem;
+    }
+
+    .bookmark_item_contents p {
+        width: 208px;
+        font-size: 0.6rem;
+        color: rgb(230, 227, 227);
+        line-height: 1.45;
+        justify-content: left;
+        text-align: justify;
+    }
+
+    .bookmark01 {
+        color: rgb(215, 245, 244);
+    }
+
+    .bookmark02 {
+        color: rgb(244, 247, 95);
+    }
+
+    .bookmark03 {
+        color: rgb(252, 212, 253);
+    }
+
+     /*section04*/
+     #section04 {
+         position: relative;
+        height: 94vh;
+        display: inline-block;
+        width: 86%;
+        margin: auto;
+        /*border: 1px solid rgb(29, 29, 82);*/
+    }
+
+    #section04>h1 {
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    #section04>.img01>img {
+        position: absolute;
+        top: 18%;
+        width: 48%;
+        display: block;
+        border: solid 0.25px rgb(144, 226, 206);
+    }
+
+    #section04>.text01 {
+        position: absolute;
+        top: 48%;
+    }
+
+    #section04>.text01>.sector01,
+    .sector02 {
+        display: inline-block;
+        width: 48%;
+    }
+
+    #section04>h1 {
+        margin-bottom: 100px;
+    }
+
+    #section04>.text01>.sector02 {
+        float: right;
+    }
+
+    /*section05*/
+    #section05 {
+        height: 134vh;
+        display: inline-block;
+        width: 86%;
+        margin: 0 auto;
+        /*border: 1px solid rgb(32, 32, 53);*/
+    }
+
+    #section05>h1 {
+        margin-top: 120px;
+        margin-bottom: 30px;
+    }
+
+    #section05>.text01 {
+        position: relative;
+        margin-top: 40px;
+    }
+
+    #section05>.text01>.sector01 {
+        position: absolute;
+        width: 48%;
+        top: 353px;
+        right: 0;
+    }
+
+    #section05>.text01>.image01>img {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 325px;
+        float: right;
+        display: inline-block;
+        object-fit: cover;
+        border: solid 0.25px rgb(144, 226, 206);
+    }
+
+     /*section06*/
+     #section06 {
+        height: 119vh;
+        display: inline-block;
+        width: 86%;
+        margin: 0 auto;
+        /*border: 1px solid rgb(123, 123, 170);*/
+    }
+
+    #section06>h1 {
+        margin-top: 120px;
+        margin-bottom: 50px;
+    }
+
+    #section06>.text01 {
+        position: relative;
+        margin-top: 0;
+    }
+
+    #section06>.text01>.sector01 {
+        display: inline-block;
+        width: 56%;
+    }
+
+    #section06>.text01>.image01>img {
+        position: absolute;
+        top: 2%;
+        right: 0;
+        display: inline-block;
+        width: 40%;
+        height: 280%;
+        object-fit: cover;
+        border: solid 0.25px rgb(144, 226, 206);
+    }
+
+    /*section07*/
+    #section07 {
+        height: 77vh;
+        display: inline-block;
+        width: 86%;
+        margin: 0 auto;
+        /*border: 1px solid rgb(118, 118, 153);*/
+    }
+
+    #section07>h1 {
+        margin-top: 120px;
+        margin-bottom: 30px;
+    }
+
+    #section07>.text01 {
+        position: relative;
+        margin-top: 50px;
+    }
+
+    #section07>.text01>.sector01 {
+        display: inline-block;
+        width: 56%;
+    }
+
+    #section07>.text01>.image01>img {
+        position: absolute;
+        top: 1%;
+        right: 0;
+        display: inline-block;
+        width: 40%;
+        height: 98%;
+        float: right;
+        object-fit: cover;
+        border: solid 0.25px rgb(144, 226, 206);
+    }
+
+    #section07>.text01>.image02>img {
+        position: absolute;
+        top: 440px;
+        right: 0;
+        display: inline-block;
+        width: 48%;
+        height: 50%;
+        float: right;
+        object-fit: cover;
+        border: solid 0.25px rgb(144, 226, 206);
+    }
+
+    /*section08*/
+    #section08 {
+        height: 132vh;
+        display: inline-block;
+        width: 86%;
+        margin: 0 auto;
+        /*border: 1px solid rgb(135, 135, 156);*/
+    }
+
+    #section08>h1 {
+        margin-top: 120px;
+        margin-bottom: 60px;
+    }
+
+    #section08>.text01 {
+        position: relative;
+        margin-top: 0;
+    }
+
+    #section08>.text01>.sector01 {
+        display: inline-block;
+        width: 66%;
+    }
+
+    #section08>.text01>.image01>img {
+        position: absolute;
+        top: 335px;
+        right: 0;
+        display: inline-block;
+        width: 100%;
+        height: 98%;
+        float: right;
+        object-fit: cover;
+        border: solid 0.25px rgb(144, 226, 206);
+    }
+
+    /*section09*/
+    #section09 {
+        height: 156vh;
+        display: inline-block;
+        width: 86%;
+        margin: 0 auto;
+        /*border: 1px solid rgb(182, 182, 243);*/
+    }
+
+    #section09>h1 {
+        margin-top: 120px;
+        margin-bottom: 50px;
+    }
+
+    #section09>.text01 {
+        position: relative;
+    }
+
+    #section09>.text01>.sector01 {
+        display: inline-block;
+        width: 38%;
+    }
+
+    #section09>.text01>.image01>img {
+        position: absolute;
+        top: 430px;
+        right: 0;
+        display: inline-block;
+        width: 58%;
+        height: 98%;
+        object-fit: cover;
+        border: solid 0.25px rgb(144, 226, 206);
+    }
+
+    #section09>.text01>.image02>img {
+        position: absolute;
+        top: 430px;
+        right: 0;
+        width: 38%;
+        height: 98%;
+        object-fit: cover;
+        display: inline-block;
+        border: solid 0.25px rgb(144, 226, 206);
+    }
+
+    /*section10*/
+    #section10 {
+        height: 109vh;
+        display: inline-block;
+        width: 86%;
+        margin: 0 auto;
+        /*border: 1px solid rgb(91, 91, 235);*/
+    }
+
+    #section10>h1 {
+        margin-top: 120px;
+        margin-bottom: 60px;
+    }
+
+    #section10>.text01 {
+        position: relative;
+        margin-top: 0;
+    }
+
+    #section10>.text01>.sector01 {
+        display: inline-block;
+        width: 38%;
+    }
+
+    #section10>.text01>.image01>img {
+        position: absolute;
+        top: 52%;
+        right: 0;
+        display: inline-block;
+        width: 58%;
+        height: 47%;
+        float: right;
+        object-fit: cover;
+        border: solid 0.25px rgb(144, 226, 206);
+    }
+
+    #section10>.text01>.image02>img {
+        position: absolute;
+        top: 1%;
+        right: 0;
+        display: inline-block;
+        width: 58%;
+        height: 47%;
+        float: right;
+        object-fit: cover;
+        border: solid 0.25px rgb(144, 226, 206);
+    }
+
+     /*section11*/
+     #section11 {
+        height: 98vh;
+        display: inline-block;
+        width: 86%;
+        margin: 0 auto;
+        /*border: 1px solid rgb(44, 44, 119);*/
+    }
+
+    /*게시판*/
+    .board_title {
+        margin-top: 120px;
+        margin-bottom: 30px;
+        text-align: left;
+    }
+
+    .board_title strong {
+        font-size: 2rem;
+        margin-left: 20px;
+    }
+
+    .board_title p {
+        font-size: 1rem;
+        margin-top: 15px;
+        margin-left: 20px;
+    }
+
+    .bt_wrap {
+        margin-top: 30px;
+        font-size: 0;
+        text-align: center;
+        margin-left: 0 auto;
+        margin-right: 0 auto;
+    }
+
+    .bt_wrap a {
+        display: inline-block;
+        min-width: 60px;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 2px;
+        font-size: 1rem;
+        margin-left: 10px;
+    }
+
+    .bt_wrap a:first-child {
+        margin-left: 0;
+    }
+
+    .bt_wrap a.on {
+        background-color: black;
+        color: #fff;
+    }
+
+    .board_list {
+        width: 92%;
+        text-align: left;
+        margin: 0 auto;
+        border-top: 2px solid black;
+    }
+
+    .board_list>div {
+        border-bottom: 1px solid #ddd;
+        font-size: 0;
+    }
+
+    .board_list>div.top {
+        border-bottom: 1px solid #999;
+    }
+
+    .board_list>div:last-child {
+        border-bottom: 1px solid black;
+    }
+
+    .board_list>div>div {
+        text-align: center;
+        display: inline-block;
+        font-size: 0.8rem;
+        font-weight: 200;
+        padding: 15px 0;
+    }
+
+    .board_list>div.top>div {
+        font-weight: 600;
+    }
+
+    .board_list .num {
+        width: 10%;
+    }
+
+    .board_list .top .title {
+        text-align: center;
+    }
+
+    .board_list .title {
+        width: 60%;
+    }
+
+    .board_list .writer {
+        width: 10%;
+    }
+
+    .board_list .date {
+        width: 10%;
+    }
+
+    .board_list .count {
+        width: 10%;
+    }
+
+    .board_page {
+        margin-top: 30px;
+        text-align: center;
+        font-size: 0;
+        margin-left: 0 auto;
+        margin-right: 0 auto;
+    }
+
+    .board_page a {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        box-sizing: border-box;
+        border: 1px solid #ddd;
+        border-left: 0;
+        vertical-align: middle;
+        line-height: 100%;
+    }
+
+    .board_page a.bt {
+        font-size: 1.2rem;
+        padding-top: 8px;
+        letter-spacing: -1px;
+    }
+
+    .board_page a.num {
+        font-size: 1.4rem;
+        padding-top: 6px;
+    }
+
+    .board_page a.num.on {
+        border-color: black;
+        background-color: black;
+        color: #fff;
+    }
+
+    .board_page a:first-child {
+        border-left: 1px solid #ddd;
+    }
+
+     /*푸터*/
+     .footer {
+        border-top: 1px solid black;
+        display: inline-block;
+        width: 86%;
+        margin: 0 auto;
+    }
+
+    .footer>img {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 20px;
+        margin-top: 30px;
+    }
+
+    .a01 {
+        width: 8%;
+    }
+
+    .a02 {
+        width: 8.8%;
+    }
+
+    .a03 {
+        width: 7%;
+    }
+
+    .a04 {
+        width: 6.8%;
+    }
+
+    .a05 {
+        width: 7%;
+    }
+
+    .a06 {
+        width: 8.8%;
+    }
+    
+    }
+</style>
+<body>
+    <header class="top-bar con-min-width">
+        <div class="logo">
+            <video autoplay muted loop>
+                <source src="image/모션로고.mp4">
+            </video>
+        </div>
+        <div class="con">
+            <nav class="top-bar__menu-box-1">
+                <ul>
+                    <li>
+                        <a href="#section01">프로모션</a>
+                        <ul>
+                            <li><a href="#section01">전화감섬 캠페인</a></li>
+                            <li><a href="#section02">포스터</a></li>
+                            <li><a href="#section03">프로모션 상품</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#section04">콜포비아</a>
+                        <ul>
+                            <li><a href="#section04">콜포비아에 대해서</a></li>
+                            <li><a href="#section05">원인</a></li>
+                            <li>
+                                <a href="#section06">문제</a>
+                                <ul>
+                                    <li><a href="#section06">피해</a></li>
+                                    <li><a href="#section07">직장인에게 끼치는 영향</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#section08">증상</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#section09">진단방법</a>
+                    </li>
+                    <li>
+                        <a href="#section10">극복방법</a>
+                    </li>
+                    <li><a href="#section11">질문게시판</a></li>
+                </ul>
+            </nav>
+            <section>
+                <div id="section01">
+                    <h1>전화감
+                        <div>섬</div> 캠페인에 대해서
+                    </h1>
+                    <div class="text01">
+                        <div class="subtext01">전화감섬 캠페인은</div>
+                        <div class="sector01">
+                            콜포비아로 인해서 업무 및 일상생활에서 전화를 이용한 활동이 힘들고 어려워하는 20대에서 50대 까지의 직장인들을 대상으로하는 기부 캠페인입니다. 기부 활동은
+                            전화감섬 캠페인의 홍보 포스터 및 그래픽 상품을 판매하고 나오는 수익금을 이용합니다.
+                            <br>콜포비아로 힘들어하는 20대에서 50대의 직장인과 그렇지 않은 직장인들에게 콜포비아라는 증상은 누구나가 겪을 수 있는 하나의
+                            증상이라는 것을 알리고 공감대를 형성할 수 있도록 만드는 것을 도와줍니다.
+                        </div>
+                        <div class="sector02">
+                            이로인해서 문제를 직시하고 이를 해결하기 위한 방법으로서 우리가 무엇을 해야하는지에 대해서 정보를
+                            전달하고 이를 실천하는 것이 힘든 직장인의 경우에는 도움을 주기 위해서 기부활동을 진행합니다. 이러한 방법으로 현대에서 쉽게 접하게 되는 콜포비아라고 하는 증상을
+                            가볍게 지나치는 것이 아니라 좀 더 주의깊게 바라보고 수 많은 노력으로 전화에 대한 사람들의 부정적인 감정은 고치는 것이 가능하다는 것을
+                            사람들에게 인식시키고 실천을 하도록 합니다.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="line_area">
+                    <div class="line"></div>
+                    <img class="symbol" src="image/심볼.png" alt="로고심볼">
+                </div>
+
+                <div id="section02">
+                    <h1>포스터</h1>
+                    <div class="img01">
+                        <video autoplay muted loop>
+                            <source src="image/모션포스터.mp4">
+                        </video>
+                        <img src="image/공익광고포스터.jpg" alt="공익광고포스터">
+                    </div>
+                </div>
+
+                <div class="line_area">
+                    <div class="line"></div>
+                    <img class="symbol" src="image/심볼.png" alt="로고심볼">
+                </div>
+
+                <div id="section03">
+                    <h1>프로모션 상품</h1>
+
+                    <h2 class="title_note">공책</h2>
+                    <ul class="note">
+                        <li class="note_item">
+                            <img class="note_item_cover" src="image/스프링공책.jpg" alt="노트01">
+                            <div class="note_item_contents">
+                                <h2 class="note01">즐거운 노트</h2>
+                                <p>전화를 할 때, 불안과 공포로 인해서 단어가 제대로 전달되지 않는 직장인들의 불편한 상황을 낙하산에서 떨어지는 글자들의 모습으로 표현해 불안한 심리와
+                                    상황을 초현실적으로 보여주고 있습니다.</p>
+                            </div>
+                        </li>
+                        <li class="note_item">
+                            <img class="note_item_cover" src="image/스프링공책02.jpg" alt="노트02">
+                            <div class="note_item_contents">
+                                <h2 class="note02">긍정적인 노트</h2>
+                                <p>콜포비아 증상을 직장인이 어떻게 느끼는가에 대해서 그래픽적으로 표현해서 떨어지는 단어들을 통해 초현실적으로 콜포비아에 대한 사람들의 부정적인 감정을
+                                희극적으로 다가가도록 하고 있습니다.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="note_item">
+                            <img class="note_item_cover" src="image/스프링공책03.jpg" alt="노트03">
+                            <div class="note_item_contents">
+                                <h2 class="note03">이해하는 노트</h2>
+                                <p>콜포비아를 경험하는 직장인들에게 다른 사람들도 전화를 향한 여러가지 복잡한 감정과 경험들을 가지고 있다는 것을 보여주는 것으로 공동체 의식을 느낄 수 있도록 하고, 극복 가능성을 가지도록
+                                    합니다.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="note">
+                        <li class="note_item">
+                            <img class="note_item_cover" src="image/스프링공책04.jpg" alt="노트01">
+                            <div class="note_item_contents">
+                                <h2 class="note01">함께하는 노트</h2>
+                                <p>전화를 하면서 느껴지는 불안과 공포와 같은 부정적인 감정들을 다른 사람들과 함께 나누고 경험하는 것으로 이것을 예방하고 이겨내는 것이 가능하다는 것을 콜포비아를 막는 모습으로 보여주고
+                                    있습니다.</p>
+                            </div>
+                        </li>
+                        <li class="note_item">
+                            <img class="note_item_cover" src="image/준비중.jpg" alt="노트05">
+                        </li>
+                        <li class="note_item">
+                            <img class="note_item_cover" src="image/준비중.jpg" alt="노트06">
+                        </li>
+                    </ul>
+
+                    <h2 class="title_card">엽서</h2>
+                    <ul class="card">
+                        <li class="card_item">
+                            <img class="card_item_cover" src="image/엽서02.jpg" alt="엽서01">
+                            <div class="card_item_contents">
+                                <h2 class="card01">괴로운 엽서</h2>
+                                <p>콜포비아 증상으로 느껴지는 불안과 공포 등의 부정적인 감정들은 적극적으로 전화를 통한 활동을 한다면 부정적인 감정들을 떨쳐낼 수가 있다는 것을 초현실적인 모습으로
+                                    사람들에게 보여주고 있습니다.</p>
+                            </div>
+                        </li>
+                        <li class="card_item">
+                            <img class="card_item_cover" src="image/엽서03.jpg" alt="엽서02">
+                            <div class="card_item_contents">
+                                <h2 class="card02">넘치는 엽서</h2>
+                                <p>콜포비아 증상을 불안과 공포와 같은 부정적인 감정들이 넘치는 현대사회에서 스마트폰에서 감정이 나오면서 불안과 공포가 차오르는 초현실적
+                                    모습으로 표현해서 감정을 극대화해서 보여주고 있습니다.</p>
+                            </div>
+                        </li>
+                        <li class="card_item">
+                            <img class="card_item_cover" src="image/엽서01.jpg" alt="엽서03">
+                            <div class="card_item_contents">
+                                <h2 class="card03">멀어지는 엽서</h2>
+                                <p>현대를 살아가는 직장인은 언제든지 콜포비아를 겪을 수 있지만 대처에 따라서 증상에 다가가는 위험의 거리가 가까워지거나 멀어지면서 달라진다는 것을 그래픽적 모습을 통해 보여주고 있습니다.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="card">
+                        <li class="card_item">
+                            <img class="card_item_cover" src="image/엽서04.jpg" alt="엽서04">
+                            <div class="card_item_contents">
+                                <h2 class="card04">협력하는 엽서</h2>
+                                <p>전화를 하면서 사람들은 불안과 공포와 같은 부정적인 감정들을 느끼지만 부담을 느끼지 않는 친숙한 상대방과 함께 협력을 하고, 노력을 한다면 콜포비아를 극복할 수 있다는
+                                    것을 시각적으로 표현했습니다.</p>
+                            </div>
+                        </li>
+                        <li class="card_item">
+                            <img class="card_item_cover" src="image/준비중.jpg" alt="엽서05">
+                        </li>
+                        <li class="card_item">
+                            <img class="card_item_cover" src="image/준비중.jpg" alt="엽서06">
+                        </li>
+                    </ul>
+
+                    <h2 class="title_bookmark">책갈피</h2>
+                    <ul class="bookmark">
+                        <li class="bookmark_item">
+                            <img class="bookmark_item_cover" src="image/책갈피01.jpg" alt="책갈피01">
+                            <div class="bookmark_item_contents">
+                                <h2 class="bookmark01">나누는 책갈피</h2>
+                                <p>콜포비아 증상으로 인해서 느껴지는 부정적인 감정들은 친한 사람들과의 전화와 협력 등을 하는 것으로 이 증상을 이겨내고 예방할 수가 있다는 것을 표현해서 사람들에게
+                                    긍적적인 모습을 전달했습니다.</p>
+                            </div>
+                        </li>
+                        <li class="bookmark_item">
+                            <img class="bookmark_item_cover" src="image/책갈피02.jpg" alt="책갈피02">
+                            <div class="bookmark_item_contents">
+                                <h2 class="bookmark02">괴로운 책갈피</h2>
+                                <p>일상에서 콜포비아를 겪고있는 사람들의 감정을 시각적으로 표현해서 콜포비아의 부정적인 감정이 위협적이고 거대하게 느껴질 수 있도록 전화에 부딪히고 부서지는 글자의 모습으로 표현을
+                                    했습니다.</p>
+                            </div>
+                        </li>
+                        <li class="bookmark_item">
+                            <img class="bookmark_item_cover" src="image/책갈피03.jpg" alt="책갈피03">
+                            <div class="bookmark_item_contents">
+                                <h2 class="bookmark03">느끼는 책갈피</h2>
+                                <p>콜포비아의 근본적인 문제는 스마트폰으로 인한 비대면 활동이며, 불안과 공포의 부정적인 감정들을 느끼게 된다는 사실을 그래픽적 요소들과 컬러들을 이용해서 현재의 상황을
+                                    알 수 있도록 했습니다.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="line_area">
+                    <div class="line"></div>
+                    <img class="symbol" src="image/심볼.png" alt="로고심볼">
+                </div>
+
+                <div id="section04">
+                    <h1>콜포비아에 대해서</h1>
+                    <div class="img01">
+                        <img src="image/스마트폰01.jpg" alt="">
+                    </div>
+                    <div class="text01">
+                        <div class="subtext01">콜포비아는</div>
+                        <div class="sector01">
+                            전화를 뜻하는 콜(Call)과 공포증을 뜻하는 포비아(Phobia)의 합성어로 현대병의 일종으로서 현대인이라면 모두가 보편적으로 가지고 있는 정신장애의 증상 중
+                            공포신경증에
+                            해당하는 증상입니다.
+                            <br>현대사회에서 스마트폰을 이용하는 직장인과 일반인이라면 겪을 수 있는 증상으로 대화 및 주문과 같은 대부분의 활동들을 비대면으로
+                            진행하면서 사람과 사람과의 직접적인 접촉이 현저히 줄어들었습니다.
+                        </div>
+                        <div class="sector02">
+                            그렇다보니 직접적이거나 혹은 간접적으로 만나거나 대화하는 것에 있어서 어려워하는 모습을 보이게 됩니다. 이에대한 대표적인 예로는 전화로 하는
+                            대화를 볼
+                            수가 있습니다. 이와같이 콜포비아라는 증상은 표면적으로 나타나는 물리적 증상이 아닌 사람의 내면에서 나타나는 문제를 나타내는 증상으로 실제로 전화를
+                            하게
+                            될 경우, 직접 말을 꺼내는 것을 어려워하고 대화에 두려워하고 공포를 느끼게 됩니다.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="line_area">
+                    <div class="line"></div>
+                    <img class="symbol" src="image/심볼.png" alt="로고심볼">
+                </div>
+
+                <div id="section05">
+                    <h1>원인</h1>
+                    <div class="text01">
+                        <div class="sector01">
+                            콜포비아의 원인으로는 현대사회에서 스마트폰 사용의 일상화로 인한 비대면 소통을 볼 수가 있습니다.
+                            <br>과거에는 직접적으로 만나거나 전화를 이용한 대화를 통해서 업무나 개인적인 일을 처리했었지만 오늘날에는 개인적인 일이나 회사 업무 등을 스마트폰, SNS 등과
+                            같은 전자기기와 소셜네트워크만 있다면 불필요한 과정 없이 비대면으로 누구나 간단하게 원하는 일을 처리할 수 있게 되었습니다. 하지만 이러한 비대면 시스템의 공급으로
+                            인해서 사람들은 서로 만나거나 직접적인 대화를 통한 의사소통을 하는 것이 익숙해지지 않다고 느끼게 되고, 어색하다고 생각하게 됩니다. 또한, 막상 전화를 이용해서
+                            대화를 하게되면 전화를 통한 대화에 대해서 어색함을 느끼게 되면서 전화 자체에 불안, 공포와 같은 부정적인 감정을 가지게되는 20대에서 50대의 직장인들이 현대에
+                            증가하고 있습니다.
+                        </div>
+                        <div class="image01">
+                            <img src="image/img01.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="line_area">
+                    <div class="line"></div>
+                    <img class="symbol" src="image/심볼.png" alt="로고심볼">
+                </div>
+
+                <div id="section06">
+                    <h1>피해</h1>
+                    <div class="text01">
+                        <div class="sector01">
+                            <div class="subtext">콜포비아로 인해 겪게되는 피해</div>
+                            <h3>첫번째</h3>
+                            <div>전화를 할 때, 대답을 할 때 까지의 시간이 오래 걸립니다.</div>
+                            <h3>두번째</h3>
+                            <div>전화를 하기 전, 상대방을 기다리게해서 피해를 주게 됩니다.</div>
+                            <h3>세번째</h3>
+                            <div>말을 계속 더듬고 어쩔줄 몰라해서 상대방에게 짜증을 유발합니다.</div>
+                        </div>
+                        <div class="image01">
+                            <img src="image/img02.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="line_area">
+                    <div class="line"></div>
+                    <img class="symbol" src="image/심볼.png" alt="로고심볼">
+                </div>
+
+                <div id="section07">
+                    <h1>직장인에게 끼치는 영향</h1>
+                    <div class="text01">
+                        <div class="sector01">
+                            <div class="subtext">직장인의 콜포비아 증상</div>
+                            <h3>첫번째</h3>
+                            <div>불안한 전화로 인해서 업무의 진행이 느려지는 영향을 줍니다.</div>
+                            <h3>두번째</h3>
+                            <div>전화를 하기 전 무슨 말을 할지 생각하면서 시간을 낭비합니다.</div>
+                            <h3>세번째</h3>
+                            <div>전화업무로 인한 스트레스로 업무 능력이 저하됩니다.</div>
+                            <h3>네번째</h3>
+                            <div>전화업무 중 갑작스런 상황에 대처하지 못하게 됩니다.</div>
+                        </div>
+                        <div class="image01">
+                            <img src="image/img03.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="line_area">
+                    <div class="line"></div>
+                    <img class="symbol" src="image/심볼.png" alt="로고심볼">
+                </div>
+
+                <div id="section08">
+                    <h1>증상</h1>
+                    <div class="text01">
+                        <div class="subtext01">콜포비아를 판단하는 증상</div>
+                        <div class="sector01">
+                            <h3>첫번째</h3>
+                            <div>전화를 할 때, 불안과 공포를 느끼면서 말을 더듬게 됩니다.</div>
+                            <h3>두번째</h3>
+                            <div>직접적인 대화보다는 카카오톡과 같은 SNS 활동을 편하게 느끼게됩니다.</div>
+                            <h3>세번째</h3>
+                            <div>전화를 하는 행동 자체를 부담스럽게 생각합니다.</div>
+                            <h3>네번째</h3>
+                            <div>전화 중 말실수를 하는 것이 두렵고 무섭다고 생각합니다.</div>
+                            <h3>다섯번째</h3>
+                            <div>전화를 하기 전 미리 통화를 하면서 할 말들을 적는 행동을 합니다.</div>
+                        </div>
+                        <div class="image01">
+                            <img src="image/img06.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="line_area">
+                    <div class="line"></div>
+                    <img class="symbol" src="image/심볼.png" alt="로고심볼">
+                </div>
+
+                <div id="section09">
+                    <h1>진단방법</h1>
+                    <div class="text01">
+                        <div class="subtext01">콜포비아를 판단하는 방법</div>
+                        <div class="sector01">
+                            <h3>첫번째</h3>
+                            <div>전화를 할 때, 불안하거나 두렵다고 느끼는지에 대해서 생각해봅니다.</div>
+                            <h3>두번째</h3>
+                            <div>평소 사람들과 대화를 할 때에는 아무렇지도 않지만 막상 전화를 하려고 하면 불안하고 두렵다고 느끼는지에 대해서 생각해봅니다.</div>
+                            <h3>세번째</h3>
+                            <div>전화 중 자신의 사소한 말실수에도 예민하게 반응하고 그것을 오랫동안 가지고 가는지를 생각해봅니다.</div>
+                            <h3>네번째</h3>
+                            <div>평소에 전화를 하는 것 보다는 문자, SNS와 같은 비대면 활동이 편하다고 생각하는지를 생각해봅니다.</div>
+                        </div>
+                        <div class="image01">
+                            <img src="image/img04.jpg" alt="">
+                        </div>
+                        <div class="image02">
+                            <img src="image/img04_02.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="line_area">
+                    <div class="line"></div>
+                    <img class="symbol" src="image/심볼.png" alt="로고심볼">
+                </div>
+
+                <div id="section10">
+                    <h1>극복방법</h1>
+                    <div class="text01">
+                        <div class="subtext01">콜포비아를 극복하기 위한 방법</div>
+                        <div class="sector01">
+                            <h3>첫번째</h3>
+                            <div>가장 편하다고 생각하는 상대와 가볍게 전화를 합니다. 일상의 수다와 같은 짧은 통화를 시도하면서 통화의 시간도 늘어나게 됩니다.</div>
+                            <h3>두번째</h3>
+                            <div>전화를 할 때, 주제를 정해서 이야기를 진행해 봅니다.</div>
+                            <h3>세번째</h3>
+                            <div>전화를 할 때, 즐겁게 이야기를 받아줍니다. 즐겁게 이야기를 하다보면 상대방도 전화를 편하게 느끼게 됩니다.</div>
+                            <h3>네번째</h3>
+                            <div>콜포비아 증상이 심하다면 전문가를 찾아가 심리상담을 받아봅니다.</div>
+                            <h3>다섯번째</h3>
+                            <div>콜포비아는 자신의 발음이 문제가 되어서 나타나기도 하기 때문에 스피치 학원을 찾아가보는 것도 하나의 방법입니다.</div>
+                        </div>
+                        <div class="image01">
+                            <img src="image/img05.jpg" alt="">
+                        </div>
+                        <div class="image02">
+                            <img src="image/img05_02.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="line_area">
+                    <div class="line"></div>
+                    <img class="symbol" src="image/심볼.png" alt="로고심볼">
+                </div>
+
+                <div id="section11">
+                    <div class="board_title">
+                        <strong>게시판</strong>
+                        <p>콜포비아에 관해서 궁금한 점을 말해주세요.</p>
+                    </div>
+                    <div class="board_list_wrap">
+                        <div class="board_list">
+                            <div class="top">
+                                <div class="num">번호</div>
+                                <div class="title">제목</div>
+                                <div class="writer">글쓴이</div>
+                                <div class="date">작성일</div>
+                                <div class="count">조회</div>
+                            </div>
+                            <div>
+                                <div class="num">5</div>
+                                <div class="title"><a href="view05.html">콜포비아란 무엇인가요?</a></div>
+                                <div class="writer">이규형</div>
+                                <div class="date">2022.11.17</div>
+                                <div class="count">999+</div>
+                            </div>
+                            <div>
+                                <div class="num">4</div>
+                                <div class="title"><a href="view04.html">콜포비아를 극복하기 위해서는 어떻게 해야하나요?</a></div>
+                                <div class="writer">홍길동</div>
+                                <div class="date">2022.11.02</div>
+                                <div class="count">999+</div>
+                            </div>
+                            <div>
+                                <div class="num">3</div>
+                                <div class="title"><a href="view03.html">콜포비아 증상으로는 무엇인가요?</a></div>
+                                <div class="writer">이순신</div>
+                                <div class="date">2022.10.27</div>
+                                <div class="count">601</div>
+                            </div>
+                            <div>
+                                <div class="num">2</div>
+                                <div class="title"><a href="view02.html">콜포비아로 인한 직장에서의 피해로는 무엇이 있나요?</a></div>
+                                <div class="writer">장발장</div>
+                                <div class="date">2022.10.17</div>
+                                <div class="count">451</div>
+                            </div>
+                            <div>
+                                <div class="num">1</div>
+                                <div class="title"><a href="view01.html">콜포비아의 원인은 무엇인가요?</a></div>
+                                <div class="writer">이규형</div>
+                                <div class="date">2022.09.17</div>
+                                <div class="count">570</div>
+                            </div>
+                        </div>
+                        <div class="board_page">
+                            <a href="#" class="bt first">
+                                << </a>
+                                    <a href="#" class="bt prev">
+                                        < </a>
+                                            <a href="#section11" class="num on">1</a>
+                                            <a href="#section11" class="num">2</a>
+                                            <a href="#section11" class="num">3</a>
+                                            <a href="#section11" class="num">4</a>
+                                            <a href="#section11" class="num">5</a>
+                                            <a href="#section11" class="bt next">></a>
+                                            <a href="#section11" class="bt last">>></a>
+                        </div>
+                        <div class="bt_wrap">
+                            <a href="view.html" class="on">등록</a>
+                            <a href="view.html">수정</a>
+                        </div>
+                    </div>
+                </div>
+
+                <footer>
+                    <div class="footer">
+                        <img class="a01" src="image/보건복지부 한글 가로조합.png" alt="">
+                        <img class="a02" src="image/부산은행 한글 가로조합.png" alt="">
+                        <img class="a03" src="image/국제신문로고.png" alt="">
+                        <img class="a04" src="image/롯데마트 한글 가로조합.png" alt="">
+                        <img class="a05" src="image/knn 한글 가로조합.png" alt="">
+                        <img class="a06" src="image/신세계 영어 가로조합.png" alt="">
+                    </div>
+                </footer>
+            </section>
+        </div>
+    </header>
+</body>
+</html>
